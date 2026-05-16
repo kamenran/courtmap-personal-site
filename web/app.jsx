@@ -370,6 +370,7 @@ function App() {
           setSortBy={setSortBy}
         />
       )}
+      <SiteFooter />
     </main>
   );
 }
@@ -394,6 +395,15 @@ function SiteNav({ view, setView }) {
         <a href="mailto:kamrane02@gmail.com">Contact</a>
       </div>
     </nav>
+  );
+}
+
+function SiteFooter() {
+  return (
+    <footer className="siteFooter">
+      <span>© 2026 Kamran Eisenberg</span>
+      <span>Computer Science · Law · Civic Technology</span>
+    </footer>
   );
 }
 
