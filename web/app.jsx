@@ -744,8 +744,7 @@ function PortfolioHome({ setView }) {
           <p className="eyebrow">Computer Science · Law · Public Institutions</p>
           <h1>Building technical tools for legal and political transparency.</h1>
           <p className="heroLead">
-            Computer Science student at Towson University focused on the intersection of technology,
-            law, public policy, constitutional systems, and AI governance.
+            Computer Science student at Towson University focused on the intersection of technology and law.
           </p>
           <div className="credentialStrip">
             <span>Towson University CS</span>
