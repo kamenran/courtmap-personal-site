@@ -863,22 +863,26 @@ function PortfolioHome({ setView }) {
         </div>
       </section>
 
-      <section className="profilePanel productOverview">
-        <div>
+      <section className="portfolioGrid productIdentity">
+        <article className="profilePanel productThesisPanel">
           <p className="label">CourtMap Overview</p>
-          <h2>Explore how Supreme Court precedent develops over time.</h2>
+          <h2>Supreme Court precedent, mapped clearly.</h2>
           <p>
-            CourtMap turns landmark cases into an interactive network of citations, overrulings,
-            constitutional anchors, and plain-English explanations.
+            Explore how landmark cases connect through citations, overrulings,
+            constitutional anchors, and doctrine shifts.
           </p>
-        </div>
-        <div className="productFeatureRow">
-          <span>Case search</span>
-          <span>Precedent graph</span>
-          <span>Overruling chains</span>
-          <span>Doctrine evolution</span>
-          <button className="quietAction compact identityLaunch" onClick={() => setView("precedent")}>Open CourtMap</button>
-        </div>
+        </article>
+        <article className="profilePanel compactPanel">
+          <p className="label">Core Product</p>
+          <ul className="cleanList">
+            <li>Supreme Court case search</li>
+            <li>Interactive precedent graph</li>
+            <li>Overruling and citation chains</li>
+            <li>Plain-English case explanations</li>
+            <li>Doctrine evolution view</li>
+          </ul>
+          <button className="quietAction compact identityLaunch" onClick={() => setView("precedent")}>Open project</button>
+        </article>
       </section>
 
       <section className="featuredProduct">
