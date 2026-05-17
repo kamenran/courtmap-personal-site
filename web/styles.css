@@ -1637,12 +1637,13 @@ button {
 }
 
 .productIdentity {
-  align-items: start;
+  align-items: stretch;
   margin-bottom: 20px;
 }
 
 .productThesisPanel {
-  min-height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .productThesisPanel h2 {
@@ -1654,7 +1655,7 @@ button {
 }
 
 .builtForBlock {
-  margin-top: 22px;
+  margin-top: auto;
   padding-top: 18px;
   border-top: 1px solid var(--line);
 }
