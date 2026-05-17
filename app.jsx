@@ -844,7 +844,7 @@ function PortfolioHome({ setView }) {
           <article>
             <span>Experience</span>
             <strong>AI Infrastructure Intern</strong>
-            <p>SolutionsInfra<br />at Fort LP Hedge Fund</p>
+            <p>SolutionsInfra<br />IT @ Fort LP Hedge Fund</p>
           </article>
         </div>
       </section>
