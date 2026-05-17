@@ -1558,6 +1558,48 @@ button {
   border-bottom: 0;
 }
 
+.experiencePanel {
+  margin-bottom: 20px;
+}
+
+.experienceList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.experienceList article {
+  min-height: 150px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 253, 251, 0.72);
+}
+
+.experienceList span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experienceList strong {
+  display: block;
+  color: var(--ink);
+  font-size: 1.08rem;
+  line-height: 1.18;
+}
+
+.experienceList p {
+  margin: 8px 0 0;
+  color: #4f5a68;
+  line-height: 1.5;
+}
+
 .scopeList {
   display: grid;
   gap: 10px;
@@ -3332,6 +3374,7 @@ h3 {
 
   .personalHero,
   .portfolioGrid,
+  .experienceList,
   .productShowcase,
   .contactGrid,
   .summaryPanel,

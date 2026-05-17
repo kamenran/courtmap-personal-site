@@ -827,6 +827,28 @@ function PortfolioHome({ setView }) {
         </article>
       </section>
 
+      <section className="profilePanel experiencePanel">
+        <p className="label">Experience</p>
+        <h2>Technical, research, and public-sector experience.</h2>
+        <div className="experienceList">
+          <article>
+            <span>Current</span>
+            <strong>Congressional Intern</strong>
+            <p>U.S. House of Representatives · Congressman Johnny Olszewski</p>
+          </article>
+          <article>
+            <span>Experience</span>
+            <strong>AI Infrastructure Intern</strong>
+            <p>SolutionsInfra · IT at Fort LP Hedge Fund</p>
+          </article>
+          <article>
+            <span>Research</span>
+            <strong>Undergraduate AI Researcher</strong>
+            <p>Towson University</p>
+          </article>
+        </div>
+      </section>
+
       <section className="aiHomeFeature">
         <div>
           <p className="label">Strategic Focus</p>
