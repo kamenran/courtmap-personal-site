@@ -6,7 +6,7 @@ const colors = {
   amendment: "#c93636",
   cited: "#6f7d8e",
   upstream: "#6f7d8e",
-  downstream: "#4b6f96",
+  downstream: "#2f7d6b",
   overruling: "#8a332f",
   current: "#166534"
 };
