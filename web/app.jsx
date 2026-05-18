@@ -41,7 +41,7 @@ const precedentCases = [
       concurrence: [],
       dissent: [],
       notParticipating: [],
-      note: "Brown is useful as a graph anchor because the doctrinal shift is dramatic while the vote alignment is unanimous."
+      note: "Brown marks a major doctrinal shift even though the judgment was unanimous."
     },
     timeline: [
       { year: 1896, title: "Plessy v. Ferguson", detail: "Separate-but-equal doctrine is accepted." },
@@ -2047,8 +2047,8 @@ function CaseBriefPanel({ selectedCase }) {
           <p>{getControllingRule(selectedCase)}</p>
         </article>
         <article>
-          <span>Use In Graph</span>
-          <p>{getGraphUse(selectedCase)}</p>
+          <span>Precedent Role</span>
+          <p>{getPrecedentRole(selectedCase)}</p>
         </article>
       </div>
     </section>
@@ -2135,8 +2135,7 @@ function PathFinder({ setSelectedCaseId }) {
           <p className="label">Doctrine Path Finder</p>
           <h2>Trace the shortest route between precedents</h2>
           <p>
-            A graph-search feature that follows citation, downstream, and overruling relationships
-            across the curated SCOTUS network.
+            Follow citation, downstream, and overruling relationships across the curated SCOTUS network.
           </p>
         </div>
         <div className="pathBadge">
@@ -2946,20 +2945,20 @@ function getControllingRule(selectedCase) {
   return selectedCase.evolution.tokens.find((token) => token.type === "added")?.text || selectedCase.holding;
 }
 
-function getGraphUse(selectedCase) {
+function getPrecedentRole(selectedCase) {
   if (selectedCase.overrules.length) {
-    return "This case shows how overruling can change constitutional doctrine across time.";
+    return "This decision changes the doctrine by rejecting earlier precedent.";
   }
   if (getIncomingOverrulers(selectedCase.id).length) {
-    return "This case shows how later decisions can overrule and replace earlier doctrine.";
+    return "This decision is part of an overruled line of precedent.";
   }
   if (selectedCase.citedBy.length > selectedCase.cites.length) {
-    return "This case functions as an influence point because later cases rely on it to develop the doctrine.";
+    return "Later decisions rely on this case to develop the doctrine.";
   }
   if (selectedCase.cites.length) {
-    return "This case synthesizes earlier doctrine into a newer constitutional rule.";
+    return "This decision draws earlier cases into a newer constitutional rule.";
   }
-  return "This case functions as a foundation for institutional power and constitutional structure.";
+  return "This decision is a foundation for later constitutional interpretation.";
 }
 
 function buildCaseBrief(selectedCase) {
