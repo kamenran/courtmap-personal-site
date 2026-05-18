@@ -4,7 +4,7 @@ Interactive graph of Supreme Court precedent for Kamran Eisenberg's personal web
 
 **Live site:** [kamran.codes](https://kamran.codes)
 
-CourtMap is a focused law + CS portfolio project. It helps users explore landmark Supreme Court cases, citation relationships, constitutional amendments, doctrine shifts, and overruling chains through a clean React/D3 interface.
+CourtMap helps users explore landmark Supreme Court cases, citation relationships, constitutional amendments, doctrine shifts, and overruling chains through a clean React/D3 interface.
 
 Scope: CourtMap is focused on **SCOTUS only**. It starts with landmark Supreme Court cases and major constitutional doctrines, then expands toward a full Supreme Court citation graph.
 
