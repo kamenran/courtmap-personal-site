@@ -1,53 +1,53 @@
 # CourtMap + TrialSim
 
-Personal portfolio and legal technology project site for Kamran Eisenberg.
-
 **Live site:** [kamran.codes](https://kamran.codes)
 
-CourtMap + TrialSim is a responsive web portfolio centered on interactive legal technology projects. The site combines a professional profile page with two featured tools: CourtMap, a Supreme Court precedent explorer, and TrialSim, an educational legal scenario simulator.
+CourtMap + TrialSim is a personal website and legal technology project built by Kamran Eisenberg. The site presents two interactive tools focused on legal reasoning, constitutional doctrine, and educational legal simulation.
 
-## Current Product
+The project is intentionally scoped as a polished web application rather than a comprehensive legal research platform. It uses curated data and transparent modeling to make legal concepts easier to explore without claiming to provide legal advice or predict real case outcomes.
 
-- Minimal personal profile page for Kamran Eisenberg
-- Contact and resume section
-- American flag-inspired visual identity
-- Briefly mascot for plain-English legal explanation
-- Responsive desktop and mobile layout
-- GitHub Pages deployment with custom domain support
+## Project Goals
+
+- Present a professional technical profile centered on the intersection of computer science and law
+- Build interactive tools for exploring legal systems, not static summaries
+- Use software design, graph visualization, and structured data to make legal reasoning more accessible
+- Keep the product honest about scope, data limits, and future expansion
 
 ## CourtMap
 
-CourtMap is an interactive SCOTUS precedent mapping tool. It helps users explore landmark Supreme Court cases as connected legal objects rather than isolated summaries.
+CourtMap is an interactive Supreme Court precedent explorer. It treats cases as connected legal objects, showing how landmark decisions relate through citations, doctrines, constitutional anchors, voting alignments, and overruling relationships.
 
-Features include:
+Current features:
 
-- Searchable curated Supreme Court case corpus
-- Case detail panel with citation, year, court, constitutional anchor, holding, status, and source link
+- Curated SCOTUS case dataset
+- Searchable case list
+- Case detail view with citation, year, court, doctrine, constitutional anchor, holding, and source link
 - Plain-English case explanations
-- Case brief panel
+- Case brief section
 - Doctrine timeline for selected cases
-- GitHub-style before/after doctrine shift view
-- Interactive D3 precedent graph
-- Doctrine path finder for citation and overruling relationships
+- Before/after doctrine shift view
+- D3 precedent graph
+- Doctrine path finder
 - Justice voting alignment view
-- Source links for official case pages
 
-Scope: CourtMap is currently focused on **SCOTUS only** using a curated landmark-case dataset. The architecture is designed to expand toward a larger Supreme Court citation graph.
+Current scope: CourtMap focuses on landmark Supreme Court cases. It is not yet a full Supreme Court database or a substitute for legal research tools.
 
 ## TrialSim
 
-TrialSim is an educational legal scenario simulator. It does not predict real legal outcomes. Instead, it models how legal variables can affect case pressure in simplified courtroom scenarios.
+TrialSim is an educational legal scenario simulator. It models how simplified legal variables can affect case pressure in hypothetical scenarios.
 
-Features include:
+Current features:
 
 - Scenario presets for criminal procedure, civil liability, AI vendor liability, hiring bias, and fair use disputes
-- Adjustable variables for evidence strength, witness reliability, jurisdiction, strategy, and constitutional issues
+- Adjustable factors for evidence strength, witness reliability, jurisdiction, litigation strategy, and constitutional issues
 - Weighted scoring model for case viability, settlement pressure, and dispute risk
-- Scenario comparison view showing how exclusion or inclusion of evidence changes modeled results
-- Argument panels for strongest points, weaknesses, and likely areas of disagreement
-- Transparent explanation that the model is educational, not legal advice or prediction
+- Scenario comparison view
+- Argument panels identifying strengths, weaknesses, and likely points of disagreement
+- Clear disclaimer that TrialSim is educational and does not predict actual legal outcomes
 
-## Stack
+Current scope: TrialSim is a structured educational model. It is not legal advice and should not be read as a litigation prediction system.
+
+## Technical Stack
 
 - React
 - JavaScript
@@ -57,29 +57,34 @@ Features include:
 - GitHub Pages
 - Custom domain routing through `kamran.codes`
 
-## Future Data Architecture
+## Data And Architecture
 
-CourtMap is designed to support larger legal datasets over time:
+The current version uses curated local data so the interface and product concept are stable. The longer-term architecture is designed for larger legal datasets.
+
+Planned data sources:
 
 - **CourtListener** for Supreme Court opinions, case names, opinion text, citations, and citation graph relationships
 - **Supreme Court Database** for issue area, decision direction, justice votes, majority/minority metadata, term/year, and legal issue coding
 - **Caselaw Access Project** as a fallback for historical full text and missing metadata
-- Neo4j-ready graph direction for citation and doctrine relationships
-- PostgreSQL-ready relational schema for structured legal metadata
 
-The schema is defined in:
+Planned storage direction:
+
+- Neo4j for citation and doctrine graph relationships
+- PostgreSQL for structured legal metadata
+
+Schema:
 
 ```text
 database/courtmap_schema.sql
 ```
 
-Architecture notes are in:
+Architecture notes:
 
 ```text
 docs/courtmap_data_architecture.md
 ```
 
-## Quick Start
+## Local Development
 
 Run a local static server:
 
@@ -103,11 +108,11 @@ https://kamran.codes
 
 ## Roadmap
 
-- Expand CourtMap beyond the curated SCOTUS dataset
+- Expand the curated SCOTUS dataset
 - Import citation relationships from CourtListener
 - Add richer justice vote and opinion-author metadata
-- Add doctrine-specific graph views for privacy, equal protection, criminal procedure, and judicial review
-- Add more TrialSim scenario presets
-- Add clearer model explanations for each TrialSim variable
-- Improve mobile layout and accessibility
-- Add optional backend/database support if the dataset grows
+- Add doctrine-specific views for privacy, equal protection, criminal procedure, and judicial review
+- Add more TrialSim scenarios
+- Improve model explanations for TrialSim variables
+- Improve accessibility and mobile polish
+- Add backend/database support if the dataset grows
